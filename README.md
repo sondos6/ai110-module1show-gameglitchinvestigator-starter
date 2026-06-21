@@ -39,13 +39,12 @@ Applied fixes:
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. 
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. Launch the app with `python -m streamlit run app.py` and select a difficulty (Easy, Normal, or Hard). Input prompt now shows the correct range for that difficulty.
+2. Enter a guess outside the valid range (e.g., type 300 on Normal mode). The game displays a clear out-of-range error instead of silently accepting the input.
+3. Submit a valid guess. The hint correctly tells you to go **Higher** if your guess is too low, or **Lower** if it is too high.
+4. Keep guessing. Watch the attempt counter increment and the score decrease with each wrong guess (both "too high" and "too low" outcomes deduct points consistently — the even-attempt scoring bug is gone).
+5. Click **New Game**. The attempt counter resets to 1, the guess history clears, and a fresh secret number is generated — the frozen new-game bug is fixed.
 
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
