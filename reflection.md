@@ -47,11 +47,19 @@ It spotted that attempts should be re-initialized as 0 "minor bug"but then menti
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
+I tested whether a bug was really fixed or not via running the run app.py from terminal and trying different inputs. For example, I tested the first fix of high/low hints via multiple manual attempts of inputing guesses higher/lower than my real guess. 
+
+I tried re-initailzing the game by pressing on New game and it successfuly prompted me to add a fresh guess and reinitialzied attempts
+
+Finally, after fixing the documented bugs, I asked claude to generate a test_game_logic.py with all the fixes and it passed the 22 tests.
+
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+
+Every time someone interacts with a Streamlit app, Streamlit would rerun the entire Python script from top to bottom and the whole file executes again. The storage of the session states happen through st.session_state where information can be carried forward.
 
 ---
 
@@ -61,3 +69,9 @@ It spotted that attempts should be re-initialized as 0 "minor bug"but then menti
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+
+I would use the habit of creating a script to test all logic/bugs fixed and also make use of the Ability to recommend test case on its own (e.g., it created a test of passing an empty string to the input guess). I also learned to increase my prompt wording so that I can be more specific. 
+
+The way this project changed my thoughts about how AI generate code was mainly about how much context it needs where the more context it has, the better code it generates.
+
